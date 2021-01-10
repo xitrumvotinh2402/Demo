@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "e831e16a-f9c1-4d59-94d6-a9e2e5b9f1c2",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}user/register",
+					"host": [
+						"{{url}}user"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"CONGTH\",\r\n  \"userEmail\": \"CONGTH@gmail.com\",\r\n  \"userPass\": \"123456789\",\r\n  \"userRole\": \"MEMBER\",\r\n  \"userFullname\": \"Trương Hoàng Công\",\r\n  \"department\": \"5ffac3dcba074e479836fec0\",\r\n  \"teampj\": [\"5ffac3dcba074e479836ff22\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}user/update",
+					"host": [
+						"{{url}}user"
+					],
+					"path": [
+						"update"
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get list user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}user",
+					"host": [
+						"{{url}}user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmZhYzQ4MmRjZmFlNjEwYTBkMWU4OGIiLCJ1c2VyUm9sZSI6IkxFQURFUiIsInVzZXJOYW1lIjoiQ29uZzEiLCJpYXQiOjE2MTAyNzA0MjJ9.C0U7qJ2qoqv5xC26V-Agb6soqLTIKNPaRZM5_om9ysM",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}user/getDetail/?id=5ffac9edf1c585292ce7feea",
+					"host": [
+						"{{url}}user"
+					],
+					"path": [
+						"getDetail",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5ffac9edf1c585292ce7feea"
+						}
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by Department",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmZhYzQ4MmRjZmFlNjEwYTBkMWU4OGIiLCJ1c2VyUm9sZSI6IkxFQURFUiIsInVzZXJOYW1lIjoiQ29uZzEiLCJpYXQiOjE2MTAyNzA0MjJ9.C0U7qJ2qoqv5xC26V-Agb6soqLTIKNPaRZM5_om9ysM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}department",
+					"host": [
+						"{{url}}department"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "department",
+							"value": "5ffac3dcba074e479836febf",
+							"disabled": true
+						}
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Leaer Department",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmZhYzQ4MmRjZmFlNjEwYTBkMWU4OGIiLCJ1c2VyUm9sZSI6IkxFQURFUiIsInVzZXJOYW1lIjoiQ29uZzEiLCJpYXQiOjE2MTAyNzA0MjJ9.C0U7qJ2qoqv5xC26V-Agb6soqLTIKNPaRZM5_om9ysM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}user/department/getLeader/?departmentId=5ffac3dcba074e479836febf",
+					"host": [
+						"{{url}}user"
+					],
+					"path": [
+						"department",
+						"getLeader",
+						""
+					],
+					"query": [
+						{
+							"key": "departmentId",
+							"value": "5ffac3dcba074e479836febf"
+						}
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by Teampj",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmZhYzQ4MmRjZmFlNjEwYTBkMWU4OGIiLCJ1c2VyUm9sZSI6IkxFQURFUiIsInVzZXJOYW1lIjoiQ29uZzEiLCJpYXQiOjE2MTAyNzA0MjJ9.C0U7qJ2qoqv5xC26V-Agb6soqLTIKNPaRZM5_om9ysM"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{url}}teampj/?teampjId=5ffac3dcba074e479836ff22",
+					"host": [
+						"{{url}}teampj"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "teampjId",
+							"value": "5ffac3dcba074e479836ff22"
+						}
+					]
+				},
+				"description": "get all user"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer {{token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "Cong1",
+							"type": "text"
+						},
+						{
+							"key": "userPass",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}user/login",
+					"host": [
+						"{{url}}user"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change User Paswords",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmZhYzQ4MmRjZmFlNjEwYTBkMWU4OGIiLCJ1c2VyUm9sZSI6IkxFQURFUiIsInVzZXJOYW1lIjoiQ29uZzEiLCJpYXQiOjE2MTAyNzA0MjJ9.C0U7qJ2qoqv5xC26V-Agb6soqLTIKNPaRZM5_om9ysM",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userPassOld",
+							"value": "123456",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "userPassNew",
+							"value": "123456789",
+							"description": "required",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}user/change-pass/5ffac9edf1c585292ce7feea",
+					"host": [
+						"{{url}}user"
+					],
+					"path": [
+						"change-pass",
+						"5ffac9edf1c585292ce7feea"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
